@@ -17,6 +17,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from openglwidget import OpenGLWidget
+from gla import GLWidget
 
 
 class Ui_SGI(object):
@@ -26,7 +27,9 @@ class Ui_SGI(object):
         #SGI.setSizeGripEnabled(False)
         #SGI.setModal(False)
 
-        self.openGLWidget = OpenGLWidget(SGI)
+        #self.openGLWidget = OpenGLWidget(SGI)
+        self.openGLWidget = GLWidget(SGI)
+        
 
         #self.openGLWidget = QtWidgets.QOpenGLWidget(SGI)
         self.openGLWidget.setGeometry(QtCore.QRect(20, 20, 641, 551))

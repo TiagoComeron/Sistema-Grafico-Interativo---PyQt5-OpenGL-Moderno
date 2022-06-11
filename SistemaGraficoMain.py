@@ -1,5 +1,6 @@
 import SistemaGraficoUI
 from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
 import sys
 
@@ -9,6 +10,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui = SistemaGraficoUI.Ui_SGI()
         self.ui.setupUi(self)
         self.atribuirBotoes()
+        timer = QtCore.QTimer(self)
+        timer.setInterval(20)   # period, in milliseconds
+        timer.timeout.connect(self.ui.openGLWidget.updateGL)
+        timer.start()
 
     def atribuirBotoes(self):
         self.ui.btTriangulo.clicked.connect(self.desenharTriangulo)
@@ -18,13 +23,13 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def keyPressEvent(self, e):
         if e.key() == Qt.Key_8:
-            print("Bom dia!")
-        if e.key() == Qt.Key_8:
-            print("Bom dia!")
-        if e.key() == Qt.Key_8:
-            print("Bom dia!")
-        if e.key() == Qt.Key_8:
-            print("Bom dia!")
+            self.ui.openGLWidget.setRotY(1)
+        if e.key() == Qt.Key_5:
+            self.ui.openGLWidget.setRotY(-1)
+        if e.key() == Qt.Key_4:
+            self.ui.openGLWidget.setRotX(-1)
+        if e.key() == Qt.Key_6:
+            self.ui.openGLWidget.setRotX(1)
     
     def reset(self):
         self.ui.openGLWidget.verticesTriangulo = self.ui.openGLWidget.verticesTrianguloOriginal

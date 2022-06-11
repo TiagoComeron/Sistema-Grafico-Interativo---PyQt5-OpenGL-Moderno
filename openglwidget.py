@@ -37,7 +37,7 @@ class OpenGLWidget(QOpenGLWidget):
         glEnable(GL_COLOR_MATERIAL)
     def paintGL(self):
         glMatrixMode(GL_PROJECTION)
-        glClearColor(0.0, 0.0, 0.0, 0.0)
+        glClearColor(0.0, 0.0, 1.0, 0.0)
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         glColor3f(1.0, 0.0, 0.0)
         glBegin(GL_TRIANGLES)
