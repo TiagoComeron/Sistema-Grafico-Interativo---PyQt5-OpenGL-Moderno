@@ -1,0 +1,24 @@
+Instruções para uso do Sistema Gráfico
+
+Rodar o arquivo main.py para iniciar o programa
+
+Vértices 	----
+
+Apenas entre -1 e 1
+
+Triângulo: 
+	Primeiro: Canto inferior esquerdo
+	Segundo: Canto inferior direito
+	Terceiro: Canto superior
+
+Quadrado: 
+	Primeiro: Canto inferior esquerdo
+	Segundo: Canto inferior direito
+	Terceiro: Canto superior direito
+	Quarto: Canto superior esquerdo
+
+Teclas 	----
+
+8 - 5 - 4 - 6 - 1 - 3 : Viewport
+
+W - S - A - D - T - G - F - H - I - K - J - L : Movimento dos pontos de controle da curva (pode-se mexer em 3 pontos de 5 sendo eles o primeiro, o do meio e o ultimo ponto da curva).
